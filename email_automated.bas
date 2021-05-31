@@ -1,4 +1,4 @@
-Attribute VB_Name = "Módulo1"
+Attribute VB_Name = "MÃ³dulo1"
 Sub EnviarCorreo()
   
 
@@ -13,13 +13,7 @@ Sub EnviarCorreo()
     correo = ActiveSheet.Range("e14")
     correo2 = ActiveSheet.Range("e15")
     correo3 = ActiveSheet.Range("e16")
-    correo4 = ActiveSheet.Range("e17")
-    
- 
-    
-    
-    
-    
+    correo4 = ActiveSheet.Range("e17")  
     
     Dim adjunto As String
     Dim cc2 As Integer
@@ -63,8 +57,6 @@ Sub EnviarCorreo()
     'Range("f2").Value = ""
     'End If
     
- 
-    
  If Range("B11") = "Si" Then
     
 On Error Resume Next
@@ -76,15 +68,13 @@ With OutMail
     
     .Body = Range("b3") & " " & Range("b4") & ":" & vbCr & vbCr & Range("b14") & " " & _
             vbCr & Range("b15") & " " & Range("b16") & vbCr & vbCr & Range("b17") & vbCr & vbCr & _
-            adjunto & vbCr & vbCr & Range("b24") & vbCr & vbCr & Range("b25") & vbCr & vbCr & Range("b26")
-            
-            
+            adjunto & vbCr & vbCr & Range("b24") & vbCr & vbCr & Range("b25") & vbCr & vbCr & Range("b26") 
             
     .Subject = Range("B10") 'asunto
     
     .Display
     
-    .HTMLBody = .HTMLBody & "<img  src='C:\Users\cristian.gomez\Desktop\macros\Captura.png'>"
+        .HTMLBody = .HTMLBody & "<img  src='C:\Users\user_name\Desktop\macros\Captura.png'>"
     
 End With
 
@@ -93,8 +83,7 @@ On Error GoTo 0
 Set PutMail = Nothing
 Set OutApp = Nothing
 
-Else
-     
+        Else
     
 On Error Resume Next
 
@@ -110,9 +99,8 @@ With OutMail
     
     .Display
     
-    .HTMLBody = .HTMLBody & "<img  src='C:\Users\cristian.gomez\Desktop\macros\Captura.png'>"
+          .HTMLBody = .HTMLBody & "<img  src='C:\Users\user_name\Desktop\macros\Captura.png'>"
     
-   
 End With
 
 On Error GoTo 0
@@ -123,4 +111,3 @@ Set OutApp = Nothing
 End If
 
 End Sub
-
